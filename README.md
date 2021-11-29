@@ -1,2 +1,3 @@
-# vfd_swmr_util
-Utilities for VFD SWMR
+# VFD SWMR Utilities
+
+Utilities for VFD SWMR (maintained separately from the HDF5 library).
