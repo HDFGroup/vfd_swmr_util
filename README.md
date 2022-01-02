@@ -1,5 +1,6 @@
-# aux_process
-A utility for VFD SWMR
+# VFD SWMR Utilities
+
+(maintained separately from the HDF5 library)
 
 To support NFS file system, this utility applies the updater files to the copy of the metadata file. 
 
