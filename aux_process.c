@@ -1530,7 +1530,7 @@ error:
 }
 #else /* H5_HAVE_AUX_PROCESS */
 int
-main (int argc, char** argv)
+main ()
 {
     exit(0);
 }
