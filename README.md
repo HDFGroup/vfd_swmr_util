@@ -2,7 +2,9 @@
 
 (maintained separately from the HDF5 library)
 
-To support NFS file system, this utility applies the updater files to the copy of the metadata file. 
+To support NFS file system, this utility applies the updater files to the copy of the metadata file. To check it out, go to the HDF5 directory and do the following two steps:
+    1. git submodule init
+    2. git submodule update
 
 Usage: aux_process [options] <md_file> <ud_path>
 
