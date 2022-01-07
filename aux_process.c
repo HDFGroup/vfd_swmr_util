@@ -446,9 +446,10 @@ do_sleep(handler_t *hand)
 static void
 usage(void)
 {
-    printf("    [-h] [-a --skip_aux] [-c --vfd_config] [-l --log_file_path] [-m --md_chksum_path] [-p --polls_per_tick] [-s --stats] [-t --tick_len] [-v --verbose]\n"); 
+    printf("    [-h] [-a --skip_aux] [-c --vfd_config] [-l --log_file_path] [-m --md_chksum_path] [-p --polls_per_tick] [-s --stats] [-t --tick_len] [-v --verbose]\n");
+    printf("    <md_file> <ud_file>\n");
     printf("    [-h --help]: this help page\n");
-    printf("    [-a --skip_aux]: exit if VDS across multiple file is being enabled (to be implented in the future)\n");
+    printf("    [-a --skip_aux]: exit if VDS across multiple file is being enabled (to be implemented in the future)\n");
     printf("    [-c --vfd_config]: quoted string containing the configuration string for the VFD stack to be used (default is sec2)\n");
     printf("    [-l --log_file_path]: path to the log file (default is no log file)\n");
     printf("    [-m --md_chksum_path]: path to the file containing the checksum values for testing purpose\n");
@@ -456,6 +457,8 @@ usage(void)
     printf("    [-s --stats]: display stats on exit\n");
     printf("    [-t --tick_len]: integer value indicating the tick length in tenths of a second (default is 4)\n");
     printf("    [-v --verbose]: write log entries to stdout\n");
+    printf("    <md_file>: the path to the metadata file. Must be on a POSIX file system.  The file may not exist yet.\n");
+    printf("    <ud_file>: the path to the updater files, which end with a number, e.g. updater.1, updater.2, etc.  The path in this example will be /a/b/.../updater.\n");
     printf("\n");
 }
 
@@ -522,7 +525,7 @@ parse_command_line(int argc, char *argv[], handler_t *hand)
         switch(opt)
         {
             case 'a': 
-                /* Whether to exit if VDS across multiple files is enabled.  To be implented in the future */
+                /* Whether to exit if VDS across multiple files is enabled.  To be implemented in the future */
                 hand->skip_aux = true;
                 break;
             case 'c':
