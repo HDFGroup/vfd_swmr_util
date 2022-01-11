@@ -9,6 +9,8 @@ else ()
   target_link_libraries (aux_process PRIVATE ${HDF5_LIBSH_TARGET})
 endif ()
 
+set (H5_DEP_EXECUTABLES aux_process)
+
 ##############################################################################
 ##############################################################################
 ###           I N S T A L L A T I O N                                      ###
