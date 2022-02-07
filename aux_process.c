@@ -1,3 +1,7 @@
+#include <hdf5.h>
+
+#ifdef H5_HAVE_AUX_PROCESS
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
@@ -7,9 +11,6 @@
 #include <unistd.h>
 #include <assert.h>
 #include <time.h>
-#include <hdf5.h>
-
-#ifdef H5_HAVE_AUX_PROCESS
 
 #define FILE_NAME_LEN                  1024
 #define SIGNATURE_LEN                  4
@@ -1535,6 +1536,6 @@ error:
 int
 main ()
 {
-    exit(0);
+    return 0;
 }
 #endif /* H5_HAVE_AUX_PROCESS */
