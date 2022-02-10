@@ -20,3 +20,16 @@ Options:
     -s --stats:          Display stats on exit.
     -t --tick_len:       Integer value indicating the tick length in tenths of a second.
     -v --verbose:        Write log entries to stdout.
+
+### Making Changes
+
+If you update this code, please update the appropriate VFD SWMR branch(es) in the main HDF5 repo:
+
+0) Initialize
+   * Clone the HDF5 repo and check out the appropriate branch
+   * `` git submodule init ``
+   * `` git submodule update ``
+1) Switch to the `` utils/vfd_swmr `` directory
+2) `` git pull origin main ``
+3) Back up to the source root and run `` git diff ``. You should see the commit changed.
+4) Create a branch, commit, push, make PR, etc.
