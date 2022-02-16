@@ -1,11 +1,10 @@
 #include <hdf5.h>
 
-#ifdef H5_HAVE_AUX_PROCESS
+#if defined(H5_HAVE_AUX_PROCESS) && !defined(H5_HAVE_WIN32_API)
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
-#include <getopt.h>
 #include <stdbool.h>
 #include <string.h>
 #include <unistd.h>
