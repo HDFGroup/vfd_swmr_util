@@ -1532,6 +1532,7 @@ main (int argc, char** argv)
 error:
     return 1;
 }
+
 #else /* H5_HAVE_AUX_PROCESS */
 int
 main ()
