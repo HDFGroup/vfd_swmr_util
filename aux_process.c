@@ -1,5 +1,6 @@
 #include <hdf5.h>
 
+/* H5_HAVE_WIN32_API should be WIN32 if this submodule becomes totally independent of HDF5 */
 #if defined(H5_HAVE_AUX_PROCESS) && !defined(H5_HAVE_WIN32_API)
 
 #include <stdio.h>
