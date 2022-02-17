@@ -1,0 +1,4 @@
+# .gitignore file for VFD SWMR utilities
+
+# Makefile.in files
+**/Makefile.in
